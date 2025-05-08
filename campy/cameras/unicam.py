@@ -317,8 +317,10 @@ def GrabFrames(cam_params, writeQueue, frameQueue, startQueue, stopReadQueue, st
 			grabResult = cam.GrabFrame(camera, frameNumber)
 			img = cam.GetImageArray(grabResult)
 
-			#if frameNumber == 0: #Img read from camera is in rgb 
-			#	np.save('./test/CamGrabSave.npy', img)
+			n_cam = cam_params["n_cam"]
+
+			if frameNumber % 50 == 0: #Img read from camera is in rgb 
+				np.save(f"./campy/test/2025_05_08_5/frame{frameNumber}_cam{n_cam}", img)
 
 			post_grab = perf_counter()
 
