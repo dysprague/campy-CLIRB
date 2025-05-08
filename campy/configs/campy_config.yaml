@@ -1,0 +1,34 @@
+# This beginner-level config uses the CPU (gpuID: -1) 
+# to compress RGB video
+# using ffmpeg's X264 codec
+
+# Recording parameters
+videoFolder: "./campy/test/2025_05_08_3"
+videoFilename: "0.mp4"
+frameRate: 15
+recTimeInSec: 1800
+
+# Camera parameters
+numCams: 2
+cameraMake: "basler"
+cameraNames: ['Camera0', 'Camera1']
+cameraSettings: "./campy/configs/a2A1920-160ucBAS_40054255_10_22_2020.pfs"
+frameWidth: 1920
+frameHeight: 1200
+
+# Compression parameters
+gpuID: -1
+pixelFormatInput: "rgb24"
+pixelFormatOutput: "rgb0"
+quality: 17
+ffmpegLogLevel: "warning"
+# ffmpegPath: "/usr/bin/ffmpeg"       # Location of ffmpeg binary if not using Anaconda
+
+# Display parameters
+displayFrameRate: 10
+
+# Trigger parameters
+#cameraTrigger: "Line2"
+#startArduino: True
+#serialPort: "COM3"
+#digitalPins: [9]

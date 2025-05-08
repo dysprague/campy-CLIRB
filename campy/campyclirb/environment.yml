@@ -1,0 +1,23 @@
+name: campyclirb
+
+dependencies:
+- python=3.8
+- pip
+- pip:
+    - "--extra-index-url https://pypi.ngc.nvidia.com"
+    - nvidia-pyindex  # redundant with the above?
+    - tensorflow==2.12.0
+    - tensorrt==8.6.1
+    - opencv-python==4.5.3.56
+    - jupyterlab
+    - ipython
+    - ipykernel
+    - pandas
+    - seaborn
+    - jedi==0.17
+    - imageio
+    - imageio_ffmpeg
+    - matplotlib
+    - pyserial
+    - pyyaml
+    - scikit-image
